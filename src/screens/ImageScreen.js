@@ -6,10 +6,18 @@ const ImageScreen = () => {
     return (
         <View>
             <Text>Image Screen</Text>
-            <ImageDetail title={'Image 1'}/>
-            <ImageDetail title={'Image 2'}/>
-            <ImageDetail title={'Image 3'}/>
-            <ImageDetail title={'Image 4'}/>
+            <ImageDetail
+                title={'Image 1'}
+                imageSource={require('../../assets/beach.jpg')}
+            />
+            <ImageDetail
+                title={'Image 2'}
+                imageSource={require('../../assets/forest.jpg')}
+            />
+            <ImageDetail
+                title={'Image 3'}
+                imageSource={require('../../assets/mountain.jpg')}
+            />
         </View>
     );
 };
