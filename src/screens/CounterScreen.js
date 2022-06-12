@@ -5,10 +5,10 @@ const reducer = (state, action) => {
     switch (action.type) {
         case 'increase':
             console.log('1');
-            return { count: state.count + 1 };
+            return { ...state, count: state.count + 1 };
 
         case 'decrease':
-            return { count: state.count - 1 };
+            return { ...state, count: state.count - 1 };
 
         default:
             console.log('def');
@@ -25,13 +25,13 @@ const CounterScreen = () => {
             <Button
                 title="Increase"
                 onPress={() => {
-                    dispatch({ action: 'increase' });
+                    dispatch({ type: 'increase' });
                 }}
             />
             <Button
                 title="Decrease"
                 onPress={() => {
-                    dispatch({ action: 'decrease' });
+                    dispatch({ type: 'decrease' });
                 }}
             />
             <Text>Counter : {count}</Text>

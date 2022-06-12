@@ -35,17 +35,17 @@ const SquareScreen = () => {
     return (
         <View>
             <ColorCounter color={'Red'}
-                onIncrease={() => dispatch({ action: 'change_red', payload: COLOR_INCREMENT })}
-                onDecrease={() => dispatch({ action: 'change_red', payload: -1 * COLOR_INCREMENT })}
+                onIncrease={() => dispatch({ type: 'change_red', payload: COLOR_INCREMENT })}
+                onDecrease={() => dispatch({ type: 'change_red', payload: -1 * COLOR_INCREMENT })}
             />
             <ColorCounter color={'Blue'}
-                onIncrease={() => dispatch({ action: 'change_blue', payload: COLOR_INCREMENT })}
-                onDecrease={() => dispatch({ action: 'change_blue', payload: -1 * COLOR_INCREMENT })}
+                onIncrease={() => dispatch({ type: 'change_blue', payload: COLOR_INCREMENT })}
+                onDecrease={() => dispatch({ type: 'change_blue', payload: -1 * COLOR_INCREMENT })}
 
             />
             <ColorCounter color={'Green'}
-                onIncrease={() => dispatch({ action: 'change_green', payload: COLOR_INCREMENT })}
-                onDecrease={() => dispatch({ action: 'change_green', payload: -1 * COLOR_INCREMENT })}
+                onIncrease={() => dispatch({ type: 'change_green', payload: COLOR_INCREMENT })}
+                onDecrease={() => dispatch({ type: 'change_green', payload: -1 * COLOR_INCREMENT })}
             />
 
             <Text>Red : {red}</Text>
