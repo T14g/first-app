@@ -15,6 +15,7 @@ const TextScreen = () => {
                 onChangeText={(newValue) => setName(newValue)}
             />
             <Text>The name is: {name}</Text>
+            {name.length < 3 && name !== '' && <Text>The name should be have at least 3 characters</Text>}
         </View>
     );
 };
