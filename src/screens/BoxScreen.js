@@ -1,12 +1,13 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
+// full width = 10 units
 const BoxScreen = () => {
     return (
         <View style={styles.viewStyle}>
-            <Text style={styles.textStyle}>Box Screen</Text>
-            <Text style={styles.textStyle}>Box Screen</Text>
-            <Text style={styles.textStyle}>Box Screen</Text>
+            <Text style={styles.text1Style}>Box Screen</Text>
+            <Text style={styles.text2Style}>Box Screen</Text>
+            <Text style={styles.text3Style}>Box Screen</Text>
         </View>
     );
 };
@@ -19,10 +20,22 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         height: 200
     },
-    textStyle: {
+    text1Style: {
+        borderWidth: 2,
+        borderColor: 'red',
+        padding: 10,
+        flex: 4
+    },
+    text2Style: {
         borderWidth: 2,
         borderColor: 'red',
         padding: 10
+    },
+    text3Style: {
+        borderWidth: 2,
+        borderColor: 'red',
+        padding: 10,
+        flex: 1
     }
 });
 
